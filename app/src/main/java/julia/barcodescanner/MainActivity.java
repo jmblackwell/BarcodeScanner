@@ -1,6 +1,11 @@
 package julia.barcodescanner;
 
-import android.app.Activity;
+/**
+ * @author Julia Blackwell
+ * @version 0.0
+ * Thanks to zxing and www.github.com/journeyapps/zxing-android-embedded
+ */
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -19,7 +24,12 @@ public class MainActivity extends AppCompatActivity {
         Button mScanButton = (Button) findViewById(R.id.scan_button);
         mScanButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                mIntegrator.initiateScan();
+                mIntegrator.initiateScan(); //launch scanner
+
+                //TODO: fix automatic orientation change upon launching scan
+
+                //TODO: save contents of scan
+
             }
         });
     }
